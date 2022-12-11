@@ -6,11 +6,11 @@ class UserTest < ActiveSupport::TestCase
                       password: "foobar", password_confirmation: "foobar")
   end
 
-  test "should be valid" do
+  test "should be valid" do   #有効性
     assert @user.valid?
   end
 
-  test "name should be present" do
+  test "name should be present" do   #存在性
     @user.name = "     "
     assert_not @user.valid?
   end
@@ -20,7 +20,7 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
-  test "name should not be too long" do
+  test "name should not be too long" do   #長さ
     @user.name = "a" * 51
     assert_not @user.valid?
   end
@@ -48,7 +48,7 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test "email addresses should be unique" do
+  test "email addresses should be unique" do   #一意性
     duplicate_user = @user.dup
     @user.save
     assert_not duplicate_user.valid?
