@@ -32,6 +32,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_template 'users/show'
     assert_not flash.empty?     # flashに対するテスト
+    assert is_logged_in?        # ユーザー登録後すぐのログインのテスト
   end
 
 end

@@ -13,6 +13,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       # 保存の成功をここで扱う。
+      reset_session     # ユーザー登録中にログインする
+      log_in @user
       flash[:success] = "Welcome to the Sample App!"
       # redirect_to user_url(@user)
       redirect_to @user
