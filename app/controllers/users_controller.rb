@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def index
     # @users = User.all
-    @users = User.paginate(page: params[:page])
+    @users = User.paginate(page: params[:page])   # paginate メソッドを使えるようにする
   end
 
   def show
@@ -21,11 +21,14 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       # 保存の成功をここで扱う。
-      reset_session     # ユーザー登録中にログインする
-      log_in @user
-      flash[:success] = "Welcome to the Sample App!"
-      # redirect_to user_url(@user)
-      redirect_to @user
+      # reset_session     # ユーザー登録中にログインする
+      # log_in @user
+      # flash[:success] = "Welcome to the Sample App!"
+      # # redirect_to user_url(@user)
+      # redirect_to @user
+      UserMailer.account_activation(@user).deliver_now
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
       render 'new', status: :unprocessable_entity
     end

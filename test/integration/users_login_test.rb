@@ -73,7 +73,6 @@ class LogoutTest < Logout
     assert_select "a[href=?]", user_path(@user), count: 0
   end
 
-  # 2番目のウィンドウでユーザーをログアウトするテスト
   test "should still work after logout in second window" do
     delete logout_path
     assert_redirected_to root_url
@@ -82,13 +81,9 @@ end
 
 class RememberingTest < UsersLogin
 
-  # チェックボックスオン時のテスト
   test "login with remembering" do
-    # cookieを保存してログイン
     log_in_as(@user, remember_me: '1')
-    # assert_not cookies[:remember_token].blank?
-    # cookiesのremember_tokenと@userのremember_tokenが等しいときにtrue
-    assert_equal cookies['remember_token'], assigns(:user).remember_token
+    assert_not cookies[:remember_token].blank?
   end
 
   test "login without remembering" do
