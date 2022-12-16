@@ -4,8 +4,9 @@ class AccountActivationsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && !user.activated? && user.authenticated?(:activation, params[:id])
       # 有効だった場合、ユーザーを認証してから activated_at タイムスタンプを更新
-      user.update_attribute(:activated,    true)
-      user.update_attribute(:activated_at, Time.zone.now)
+      # user.update_attribute(:activated,    true)
+      # user.update_attribute(:activated_at, Time.zone.now)
+      user.activate
       log_in user
       flash[:success] = "Account activated!"
       redirect_to user

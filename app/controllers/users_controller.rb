@@ -6,10 +6,13 @@ class UsersController < ApplicationController
   def index
     # @users = User.all
     @users = User.paginate(page: params[:page])   # paginate メソッドを使えるようにする
+    # 有効なユーザーだけを表示するコード
+    @users = User.where(activated: true).paginate(page: params[:page])
   end
 
   def show
     @user = User.find(params[:id])
+    redirect_to root_url and return unless @user.activated?
   end
 
   def new
@@ -26,7 +29,8 @@ class UsersController < ApplicationController
       # flash[:success] = "Welcome to the Sample App!"
       # # redirect_to user_url(@user)
       # redirect_to @user
-      UserMailer.account_activation(@user).deliver_now
+      # UserMailer.account_activation(@user).deliver_now
+      @user.send_activation_email
       flash[:info] = "Please check your email to activate your account."
       redirect_to root_url
     else

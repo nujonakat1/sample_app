@@ -8,6 +8,14 @@ michael:
   activated: true
   activated_at: <%= Time.zone.now %>
 
+# 無効なユーザーを1人追加
+inactive:
+  name: Inactive User
+  email: inactive@example.com
+  password_digest: <%= User.digest('password') %>
+  admin: false
+  activated: false
+
 archer:
   name: Sterling Archer
   email: duchess@example.gov

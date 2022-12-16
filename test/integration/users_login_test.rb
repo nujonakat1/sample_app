@@ -13,7 +13,7 @@ class InvalidPasswordTest < UsersLogin
     get login_path
     assert_template 'sessions/new'
   end
-
+  # 無効なログインのテスト
   test "login with valid email/invalid password" do
     post login_path, params: { session: { email:    @user.email,
                                           password: "invalid" } }
