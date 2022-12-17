@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-  get 'users/new'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
   root "static_pages#home"
   get  "/help",    to: "static_pages#help"
   get  "/about",   to: "static_pages#about"
@@ -16,4 +10,5 @@ Rails.application.routes.draw do
   resources :users
   #GETリクエストの URLは、/account_activation/トークン/edit
   resources :account_activations, only: [:edit]
+  resources :password_resets,     only: [:new, :create, :edit, :update]
 end
