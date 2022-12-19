@@ -30,9 +30,9 @@ class PasswordResetsController < ApplicationController
       render 'edit', status: :unprocessable_entity
       # 新しいパスワードが正しければ、更新する
     elsif @user.update(user_params)
-
       reset_session
       log_in @user
+      @user.update_attribute(:reset_digest, nil)
       flash[:success] = "Password has been reset."
       redirect_to @user
     else
