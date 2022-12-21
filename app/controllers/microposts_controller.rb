@@ -22,6 +22,8 @@ class MicropostsController < ApplicationController
       redirect_to root_url, status: :see_other
     else
       redirect_to request.referrer, status: :see_other
+    # 参照元URLがnilである場合は指定のURLにリダイレクトします
+    # redirect_back_or_to(root_url, status: :see_other)
     end
   end
 
