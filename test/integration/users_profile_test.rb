@@ -13,6 +13,14 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     assert_select 'title', full_title(@user.name)
     assert_select 'h1', text: @user.name
     assert_select 'h1>img.gravatar'
+     # 特定のHTMLタグが存在する→ strong id="following"
+    assert_select 'strong#following'
+    # 描写されたページに@user.following.countを文字列にしたものが含まれる
+    assert_match @user.following.count.to_s, response.body
+    # 特定のHTMLタグが存在する→ strong id="followers"
+    assert_select 'strong#followers'
+    # 描写されたページに@user.followers.countを文字列にしたものが含まれる
+    assert_match @user.followers.count.to_s, response.body
 
     assert_match @user.microposts.count.to_s, response.body
     # assert_select 'div.pagination'
