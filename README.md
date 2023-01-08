@@ -1,25 +1,29 @@
-Twitterを模した短文投稿アプリです。
-（Ruby on Rails チュートリアルのサンプルアプリケーションです）
+<h1>Twitterを模した短文投稿アプリです。</h1>
+<h3>（Ruby on Rails チュートリアルのサンプルアプリケーションです）</h3>
 
 <img width="1792" alt="スクリーンショット 2023-01-08 21 10 26" src="https://user-images.githubusercontent.com/119907964/211195413-64d6dc3e-363c-47a8-9434-94b7a75816f4.png">
 
 <img width="1792" alt="スクリーンショット 2023-01-08 21 09 38" src="https://user-images.githubusercontent.com/119907964/211195424-968fb826-94d2-4152-8040-9928951ac97e.png">
 
-レスポンシブ対応の画像です。
+<h3>レスポンシブ対応の画像です。</h3>
 
-![レスポンシブ対応画面 jpg](https://user-images.githubusercontent.com/119907964/211195696-4c9164ba-c4ee-4043-aa42-6294e6a327c2.jpg)
+<img src="https://user-images.githubusercontent.com/119907964/211195696-4c9164ba-c4ee-4043-aa42-6294e6a327c2.jpg" width="320px">
 
-URL
+<h2>URL</h2>
 https://sample-app-1zmk.onrender.com
 
-機能の一覧
-・ユーザー登録、ログイン機能
-・140文字の投稿機能
-・画像投稿
-・フォロー機能
+<h2>機能の一覧</h2>
+<ul>
+  <li>ユーザー登録、ログイン機能</li>
+  <li>140文字の投稿機能</li>
+  <li>画像投稿</li>
+  <li>フォロー機能</li>
+</ul>
 
-使用技術
-・Ruby on Rails 7.0.4
+<h2>使用技術</h2>
+<ul>
+  <li>Ruby on Rails 7.0.4</li>
+</ul>
 
 <!--# Ruby on Rails チュートリアルのサンプルアプリケーション-->
 
