@@ -1,7 +1,13 @@
-Twitterを模した投稿アプリです。
+Twitterを模した短文投稿アプリです。
 （Ruby on Rails チュートリアルのサンプルアプリケーションです）
 
-レスポンシブ対応しているのでスマホからもご確認いただけます。
+<img width="1792" alt="スクリーンショット 2023-01-08 21 10 26" src="https://user-images.githubusercontent.com/119907964/211195413-64d6dc3e-363c-47a8-9434-94b7a75816f4.png">
+
+<img width="1792" alt="スクリーンショット 2023-01-08 21 09 38" src="https://user-images.githubusercontent.com/119907964/211195424-968fb826-94d2-4152-8040-9928951ac97e.png">
+
+レスポンシブ対応の画像です。
+
+![レスポンシブ対応画面 jpg](https://user-images.githubusercontent.com/119907964/211195696-4c9164ba-c4ee-4043-aa42-6294e6a327c2.jpg)
 
 URL
 https://sample-app-1zmk.onrender.com
