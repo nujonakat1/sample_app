@@ -1,4 +1,4 @@
-<h1>Twitterを模した短文投稿アプリです。</h1>
+<h1>Twitterを模した短文投稿アプリ</h1>
 <h3>（Ruby on Rails チュートリアルのサンプルアプリケーションです）</h3>
 
 <img width="1792" alt="スクリーンショット 2023-01-08 21 10 26" src="https://user-images.githubusercontent.com/119907964/211195413-64d6dc3e-363c-47a8-9434-94b7a75816f4.png">
