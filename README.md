@@ -33,7 +33,9 @@ https://sample-app-1zmk.onrender.com
 </ul>
 
 <h2>テスト</h2>
-  <p></p>
+<ul>
+  <li>minitest 5.15.0</li>
+</ul>
 
 <!--# Ruby on Rails チュートリアルのサンプルアプリケーション-->
 
