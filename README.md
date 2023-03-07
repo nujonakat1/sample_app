@@ -1,4 +1,4 @@
-<h1>Twitterを模した投稿アプリ</h1>
+<h1>短文投稿SNSアプリ</h1>
 <h3>（Ruby on Rails チュートリアルのサンプルアプリケーション）</h3>
 
 <img width="1792" alt="スクリーンショット 2023-01-08 21 10 26" src="https://user-images.githubusercontent.com/119907964/211195413-64d6dc3e-363c-47a8-9434-94b7a75816f4.png">
@@ -17,18 +17,15 @@ https://sample-app-1zmk.onrender.com
 <ul>
   <li>Ruby 3.1.2</li>
   <li>Ruby on Rails 7.0.4</li>
-  <li>AWS could9</li>
-  <li>SQLite3 1.4.2</li>
+  <li>AWS S3</li>
+  <li>PostgreSQL 14</li>
 </ul>
 
-<h2>AWS構成図</h2>
-  <p></p>
 
 <h2>機能の一覧</h2>
 <ul>
   <li>ユーザー登録、ログイン機能</li>
-  <li>投稿機能</li>
-  <li>画像投稿</li>
+  <li>短文・画像投稿機能</li>
   <li>フォロー機能</li>
 </ul>
 
